@@ -147,8 +147,7 @@
                                             csize = 'large';
                                         }
                                         var c = ' marker-cluster-' + csize;
-                                        return new L.DivIcon({ html: '<div><span class="visually-hidden">' + csize +' cluster of </span><span>' + childCount + '</span><span class="visually-hidden"> items</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(40, 40) });
-                            
+                                        new L.DivIcon({ html: childCount, className: 'marker-cluster' + c, iconSize: new L.Point(40, 40) });
                                     }
                                 })
             return groupToReturn;
