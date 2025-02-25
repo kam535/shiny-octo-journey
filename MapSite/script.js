@@ -10,7 +10,7 @@
 
     // Start and End year of the dataset
         const baseStartYear = 1800;
-        const baseEndYear = 2019;
+        const baseEndYear = 2024;
 
     //Markers & Clusters
         // The color of the markers, used in function customizeMarker()
@@ -98,35 +98,6 @@
 
     // Get the initial Markers
         renderPinsFromURL(something_markers, geoJsonURL);
-
-
-
-
-
-// Functions to be used above
-    // Implement the customized Icon
-        function customizeMarker(){
-            const markerNarrativeHtmlStyles = `
-                                          background-color: ${markColor};
-                                          width: 1.2rem;
-                                          height: 1.2rem;
-                                          display: block;
-                                          top: -1.2rem;
-                                          position: relative;
-                                          border-radius: 3rem 3rem 0;
-                                          transform: rotate(45deg);
-                                          border: 0.5px solid #FFFFFF
-                                      `
-            var icon = L.divIcon({
-                                      className: "my-custom-pin",
-                                      iconAnchor: [10, 5],
-                                      labelAnchor: [0, 0],
-                                      popupAnchor: [0, -18],
-                                      html: `<span style="${markerNarrativeHtmlStyles}" />`
-                                    })
-            return icon;
-        };
-
 
 
     // Set the cluster of markers
