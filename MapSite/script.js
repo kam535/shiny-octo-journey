@@ -66,7 +66,7 @@
                         $.getJSON(geoJsonURL, function(data){
                             let GEOJSON  = data;
                             for (let i = 0; i < GEOJSON["features"].length; i++){
-                                if (GEOJSON["features"][i]["properties"]["Date"] >= startYear && GEOJSON["features"][i]["properties"]["Date"] <= endYear) {  // will change "id" to "year"
+                                if (GEOJSON["features"][i]["properties"]["date"] >= startYear && GEOJSON["features"][i]["properties"]["date"] <= endYear) {  // will change "id" to "year"
                                     newGeoJson["features"].push(GEOJSON["features"][i])
                                 }
                             }
