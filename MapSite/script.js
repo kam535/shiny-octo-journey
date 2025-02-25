@@ -10,13 +10,13 @@
 
     // Start and End year of the dataset
         const baseStartYear = 1800;
-        const baseEndYear = 2024;
+        const baseEndYear = 2019;
 
     //Markers & Clusters
         // The color of the markers, used in function customizeMarker()
             const markColor = '#4E91BE';
         // Determine the threshold of distance that cluster multiple markers, used in Function initialMarkerClusters()
-            const maxClusterRadius = 120;
+            const maxClusterRadius = 200;
         // Specify the color of the marker cluster in css under the class name, used in Function initialMarkerClusters()
             const clusterColorClass = 'marker-cluster-color';
 
