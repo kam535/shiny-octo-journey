@@ -6,10 +6,10 @@
         const geoCenter = [42.15, -83.7436];
 
     // Determine initial range of area shown on map (zoom closer when the number is higher)
-        const zoomLevel = 11;
+        const zoomLevel = 5;
 
     // Start and End year of the dataset
-        const baseStartYear = 1992;
+        const baseStartYear = 1800;
         const baseEndYear = 2019;
 
     //Markers & Clusters
@@ -171,8 +171,8 @@
                                 {   // Information shown in tooltip
                                         onEachFeature: function(feature,layer){
                                             layer.bindPopup(
-                                                "<b>Address:  </b>" + feature.properties.address + "<br>" +
-                                                "<b>No. of Students:  </b>" + feature.properties.Count);
+                                                "<b>Work: </b>" + feature.properties.title + "<br>" +
+                                                "<b>Author: </b>" + feature.properties.creator);
                                         },
                                     pointToLayer: function (feature, latlng) {
                                         return L.marker(latlng, {icon: customizedIcon});
