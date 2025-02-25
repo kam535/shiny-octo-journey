@@ -171,9 +171,10 @@
                                         onEachFeature: function(feature,layer){
                                             layer.bindPopup(
                                                 "<b>Work: </b>" + feature.properties.title + "<br>" +
-                                                "<b>Author: </b>" + feature.properties.creator) + "<br>" +
-                                                "<b>Date: </b>" + feature.properties.date) + "<br>" +
-                                                "<b>Subject: </b>" + feature.properties.subject);
+                                                "<b>Author: </b>" + feature.properties.creator + "<br>" +
+                                                "<b>Date: </b>" + feature.properties.date + "<br>" +
+                                                "<b>Subject: </b>" + feature.properties.subject
+                                            );
                                         },
                                     pointToLayer: function (feature, latlng) {
                                         return L.marker(latlng, {icon: customizedIcon});
