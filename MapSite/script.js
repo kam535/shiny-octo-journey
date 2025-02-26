@@ -137,17 +137,15 @@
                                     maxClusterRadius: `${maxClusterRadius}`,
                                     singleMarkerMode: false,
                                     iconCreateFunction: function(cluster){
-                                        var childCount = cluster.getChildCount();
-                                        var csize;
-                                        if (childCount < 10) {
-                                            csize = 'small';
-                                        } else if (childCount < 100) {
-                                            csize = 'medium';
-                                        } else {
-                                            csize = 'large';
-                                        }
-                                        var c = ' marker-cluster-' + csize;
-                                        new L.DivIcon({ html: childCount, className: 'marker-cluster' + c, iconSize: new L.Point(40, 40) });
+                                        count = 0;
+                                        cluster.getAllChildMarkers().forEach(function(child){
+                                            count =count + parseInt(child.feature.properties.Count);
+                                        });
+                                        return L.divIcon({
+                                            className:`marker-cluster ${clusterColorClass}`,
+                                            iconSize: new L.Point(40,40),
+                                            html: `<div><span >` + count + '</span></div>'
+                                        });
                                     }
                                 })
             return groupToReturn;
