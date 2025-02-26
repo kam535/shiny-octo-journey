@@ -10,7 +10,7 @@
 
     // Start and End year of the dataset
         const baseStartYear = 1800;
-        const baseEndYear = 2024;
+        const baseEndYear = 2019;
 
     //Markers & Clusters
         // The color of the markers, used in function customizeMarker()
