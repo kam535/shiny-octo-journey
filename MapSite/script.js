@@ -137,14 +137,11 @@
                                     maxClusterRadius: `${maxClusterRadius}`,
                                     singleMarkerMode: false,
                                     iconCreateFunction: function(cluster){
-                                        count = 0;
-                                        cluster.getAllChildMarkers().forEach(function(child){
-                                            count =count + parseInt(child.feature.properties.Count);
-                                        });
+                                        var childCount = cluster.getChildCount();
                                         return L.divIcon({
                                             className:`marker-cluster ${clusterColorClass}`,
                                             iconSize: new L.Point(40,40),
-                                            html: `<div><span >` + count + '</span></div>'
+                                            html: `<div><span >` + childCount + '</span></div>'
                                         });
                                     }
                                 })
