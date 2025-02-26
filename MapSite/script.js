@@ -14,7 +14,7 @@
 
     //Markers & Clusters
         // The color of the markers, used in function customizeMarker()
-            const markColor = '#4E91BE';
+            const markColor = '#E37620';
         // Determine the threshold of distance that cluster multiple markers, used in Function initialMarkerClusters()
             const maxClusterRadius = 100;
         // Specify the color of the marker cluster in css under the class name, used in Function initialMarkerClusters()
